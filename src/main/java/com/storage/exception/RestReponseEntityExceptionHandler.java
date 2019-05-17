@@ -18,7 +18,7 @@ public class RestReponseEntityExceptionHandler {
     }
 
     @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
-    @ExceptionHandler(value = ImageNotFoundException.class)
+    @ExceptionHandler(value = CannotSaveException.class)
     public void imageSaveError() {
         log.debug("Image Save Exception");
     }

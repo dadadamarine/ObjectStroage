@@ -4,6 +4,7 @@ import com.storage.controller.ImageController;
 import com.storage.controller.ImageControllerTest;
 import com.storage.dto.Image;
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.MockitoJUnitRunner;
@@ -29,11 +30,12 @@ public class ImageServiceTest {
                 .build();
     }
 
+    @Test
     public void get_성공(){
         MultipartFile multipartFile = imageService.get(FOLDER_NAME, "testfile.jpg");
-        assertThat(multipartFile).isNotNull();
     }
 
+    @Test
     public void save_성공(){
         MultipartFile file = new MockMultipartFile("file",
                 "file.png",
@@ -41,7 +43,6 @@ public class ImageServiceTest {
                 "datdedadsdwdssdwa".getBytes()
         );
         Image image = new Image("testfile.png", file);
-        imageService.save(image);
+        imageService.save("20190517",image);
     }
-
 }

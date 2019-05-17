@@ -28,8 +28,8 @@ public class ImageController {
     @PostMapping("")
     public ResponseEntity<Void> save(
             @PathVariable String folder,
-            @RequestParam("file") MultipartFile file){
-        imageService.save(file);
+            @ModelAttribute Image image){
+        imageService.save(folder,image);
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         return new ResponseEntity<>(headers ,HttpStatus.CREATED);
