@@ -20,7 +20,7 @@ public class ImageController {
     }
 
     @GetMapping("/{filename}")
-    public Image get(@PathVariable String folder,
+    public MultipartFile get(@PathVariable String folder,
                      @PathVariable String filename) {
         return imageService.get(folder,filename);
     }

@@ -12,6 +12,8 @@ import javax.persistence.Entity;
 @AllArgsConstructor
 public class Image {
 
+    private String fileName;
+
     private MultipartFile file;
 
 }
