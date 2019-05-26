@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.storage</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>springboot-storage</artifactId>
     <packaging>jar</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>pictureOnMapStorage</name>
