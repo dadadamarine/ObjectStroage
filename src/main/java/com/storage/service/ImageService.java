@@ -13,7 +13,6 @@ import java.io.IOException;
 public class ImageService {
 
     public MultipartFile get(String date, String fileName) {
-
         return null;
     }
 
