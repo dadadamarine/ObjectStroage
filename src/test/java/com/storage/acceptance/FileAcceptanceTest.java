@@ -31,14 +31,14 @@ public class FileAcceptanceTest extends AcceptanceTest {
         assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.CREATED);
     }
 
-    @Test
-    public void getApi_success() {
-        //when
-        ResponseEntity<Object> responseEntity =
-                sendGet(API_IMAGE_URI+"/1" , Object.class);
-        //then
-        log.info("body : {}", responseEntity.getBody());
-        assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.CREATED);
-    }
+//    @Test
+//    public void getApi_success() {
+//        //when
+//        ResponseEntity<Object> responseEntity =
+//                sendGet(API_IMAGE_URI+"/1" , Object.class);
+//        //then
+//        log.info("body : {}", responseEntity.getBody());
+//        assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.CREATED);
+//    }
 
 }
