@@ -2,8 +2,9 @@ package com.storage.service;
 
 import com.storage.dto.Image;
 import com.storage.exception.CannotSaveException;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -12,8 +13,9 @@ import java.io.IOException;
 @Service
 public class ImageService {
 
-    public MultipartFile get(String date, String fileName) {
-        return null;
+    public Resource get(String date, String fileName) {
+        ClassPathResource classPathResource = new ClassPathResource("static/images/testFileCheck.jpg");
+        return classPathResource;
     }
 
     public void save(String folder, Image image) {

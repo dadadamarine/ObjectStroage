@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
+import org.springframework.web.multipart.MultipartFile;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -25,6 +26,16 @@ public class FileAcceptanceTest extends AcceptanceTest {
         //when
         ResponseEntity<Void> responseEntity =
                 sendFile(API_IMAGE_URI, parameters, Void.class);
+        //then
+        log.info("body : {}", responseEntity.getBody());
+        assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.CREATED);
+    }
+
+    @Test
+    public void getApi_success() {
+        //when
+        ResponseEntity<Object> responseEntity =
+                sendGet(API_IMAGE_URI+"/1" , Object.class);
         //then
         log.info("body : {}", responseEntity.getBody());
         assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.CREATED);

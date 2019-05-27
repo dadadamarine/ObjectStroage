@@ -7,9 +7,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.multipart.MultipartFile;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ImageControllerTest {
@@ -41,7 +41,7 @@ public class ImageControllerTest {
 
 
         @Override
-        public MultipartFile get(String date, String fileName) {
+        public ClassPathResource get(String date, String fileName) {
             return null;
         }
 
